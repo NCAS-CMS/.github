@@ -6,7 +6,7 @@ kept in sync.
 ```mermaid
 flowchart LR
 
-    %% ============================================================
+    %% ============================================================repo-
     %% CF Data Tools
     %% ============================================================
 
@@ -30,6 +30,7 @@ flowchart LR
 
     %% ============================================================
     %% Dependencies
+    %% Arrow direction: dependent --> dependency
     %% ============================================================
 
     cfpython --> cfdm
@@ -77,8 +78,13 @@ flowchart LR
     subgraph LEGEND["Legend"]
         direction TB
 
-        legend_cf["CF Data Tools"]
-        legend_data["Data Tools"]
+        legend_cf["CF Data Tool"]
+        legend_data["Data Tool"]
+
+        legend_a["A"]
+        legend_b["B"]
+
+        legend_a -->|depends directly on| legend_b
 
         class legend_cf cf
         class legend_data data
