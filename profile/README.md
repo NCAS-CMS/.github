@@ -16,6 +16,8 @@ Note:
 * Some `NCAS-CMS/*` repos are yet to be included in the table but will be incorporated if relevant shortly. 
 * Libraries below are generally open-source and Python-based, unless indicated otherwise.
 
+A directed graph view of the inter-dependencies of the Tools libraries, as per the 'Depends directly
+on' column, can be viewed [here](../resources/repo-dependencies.md).
 
 | Category          | Repository (a library/tool or resource or archive)                     | Short description (otherwise see README)                                      | Depends *directly* on (if a library) / uses (if a resource), including other CMS libraries only | Main contact / responsible party | Release/update schedule, if any                                                        |
 | ----------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
