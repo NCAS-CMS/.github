@@ -6,7 +6,7 @@ kept in sync.
 ```mermaid
 flowchart LR
 
-    %% ============================================================repo-
+    %% ============================================================
     %% CF Data Tools
     %% ============================================================
 
@@ -30,7 +30,8 @@ flowchart LR
 
     %% ============================================================
     %% Dependencies
-    %% Arrow direction: dependent --> dependency
+    %% Solid arrow = direct dependency
+    %% Dotted arrow = optional dependency
     %% ============================================================
 
     cfpython --> cfdm
@@ -38,7 +39,8 @@ flowchart LR
     cfpython --> pyfive
 
     cfdm --> cfunits
-    cfdm --> pyfive
+    cfdm --> xnetcdf
+    cfdm -.->|optional| umfive
 
     cfplot --> cfpython
 
@@ -78,26 +80,20 @@ flowchart LR
     subgraph LEGEND["Legend"]
         direction TB
 
-        legend_cf["CF Data Tool"]
-        legend_data["Data Tool"]
+        legend_cf["CF Data Tools"]
+        legend_data["Data Tools"]
 
         legend_a["A"]
         legend_b["B"]
 
         legend_a -->|depends directly on| legend_b
 
+        legend_optional_a["A"]
+        legend_optional_b["B"]
+
+        legend_optional_a -.->|optional| legend_optional_b
+
         class legend_cf cf
         class legend_data data
     end
-
-    %% Styling
-    classDef cf fill:#DCE6F1,stroke:#4472C4,color:#000
-    classDef data fill:#E2EFDA,stroke:#70AD47,color:#000
-    classDef training fill:#FFF2CC,stroke:#BF9000,color:#000
-    classDef docs fill:#E7E6E6,stroke:#7F7F7F,color:#000
-    classDef website fill:#FCE4D6,stroke:#C55A11,color:#000
-    classDef deprecated fill:#EDEDED,stroke:#A6A6A6,color:#666
-
-    class cfpython,cfdm,cfplot,cfunits cf
-    class pyfive,pyactivestorage,xnetcdf,xconv2,cmip7_repack,umfive,p5rem,h5netcdf data
 ```
