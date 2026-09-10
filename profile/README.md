@@ -9,12 +9,13 @@ For more information, please see:
 
 ### Repositories Breakdown/Tracker
 
-⚠️ Warning: this table is under development so information may not be correct unless it is more mature
+> [!WARNING]
+> This table is under development so information may not be correct unless it is more mature
 and this message is removed.
 
-Note:
-* Some `NCAS-CMS/*` repos are yet to be included in the table but will be incorporated if relevant shortly. 
-* Libraries below are generally open-source and Python-based, unless indicated otherwise.
+> [!NOTE]
+> * Some `NCAS-CMS/*` repos are yet to be included in the table but will be incorporated if relevant shortly. 
+> * Libraries below are generally open-source and Python-based, unless indicated otherwise.
 
 A directed graph view of the inter-dependencies of the Tools libraries, as per the 'Depends directly
 on' column, can be viewed [here](../resources/repo-dependencies.md).
